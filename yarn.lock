@@ -446,12 +446,10 @@
     pouchdb-collections "^1.0.1"
     tiny-queue "^0.2.1"
 
-"@pusher/chatkit@^0.7.17":
-  version "0.7.17"
-  resolved "https://registry.yarnpkg.com/@pusher/chatkit/-/chatkit-0.7.17.tgz#2f3229e3ec04590924d6f6719da4d1e158825f57"
-  dependencies:
-    pusher-platform "^0.15.1"
-    ramda "^0.25.0"
+"@pusher/chatkit-client@^1.4.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@pusher/chatkit-client/-/chatkit-client-1.9.1.tgz#53c46360955315fae3d9d67ac513dd6763574e7b"
+  integrity sha512-SIg6FVY45Qieq7qh2sejk6em6D+EVfF0VU1VtDPkpMM74lL1227mDWyeZefd81aXJh1tN/X+N7XjGWQkP4lPxw==
 
 abbrev@1:
   version "1.1.1"
@@ -3499,17 +3497,9 @@ pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
-pusher-platform@^0.15.1:
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/pusher-platform/-/pusher-platform-0.15.1.tgz#e8ff7e59f8440ddae6dd71a50e4796400b7ec62f"
-
 qs@^6.5.0:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
-
-ramda@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
 
 randomatic@^3.0.0:
   version "3.1.0"
