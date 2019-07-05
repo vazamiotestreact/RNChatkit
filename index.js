@@ -41,9 +41,9 @@ app.get("/users", (req, res) => {
     limit: 200
   })
     .then((user) => {
-      console.log('Success', user);
+      res.send('Success', user);
     }).catch((err) => {
-      console.log(err);
+      res.send(err);
     });
   
 })
@@ -55,9 +55,9 @@ app.post("/users", (req, res) => {
     username
   })
     .then((user) => {
-      console.log('Success', user);
+      res.send('Success', user);
     }).catch((err) => {
-      console.log(err);
+      res.send(err);
     });
   
 })
