@@ -20,7 +20,7 @@ app.use(cors());
 
 app.get("/", (req, res) => {
   console.log("AAA: 1")
-  res.send("all green!");
+  res.send("Api work! :-)");
 });
 
 app.post('/auth', (req, res) => {
