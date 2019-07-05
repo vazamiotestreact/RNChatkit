@@ -9,8 +9,6 @@ const chatkit_secret = "9f524a7a-d414-45f8-b2a9-498267df3cd6:Tywp2QvyqFS6tGkq67w
 
 const chatkit = new Chatkit.default({
   instanceLocator: 'v1:us1:082d1264-5771-48aa-9828-a1f0e3231330',
-  // instanceLocator: `v1:us1:${instance_locator_id}`,
-  // key: chatkit_secret
   key: "9f524a7a-d414-45f8-b2a9-498267df3cd6:Tywp2QvyqFS6tGkq67whRFkmiCZgCZdnnNp6SsGR1W8="
 });
 
@@ -19,7 +17,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  console.log("AAA: 1")
   res.send("Api work! :-)");
 });
 
@@ -34,6 +31,22 @@ app.post('/auth', (req, res) => {
      .send(authData.body);
 })
 
+app.post("/users", (req, res) => {
+  const { username } = req.body;
+  console.log(username)
+  chatkit.createUser({
+    id: username,
+    name: username
+  })
+    .then((user) => {
+      console.log("OK", user)
+      res.status(200).send(user);
+    }).catch((err) => {
+      console.log("ERROR", err)
+      res.status(500).send(err);
+    });
+  
+})
 
 app.get("/users", (req, res) => {
   
@@ -41,26 +54,14 @@ app.get("/users", (req, res) => {
     limit: 200
   })
     .then((user) => {
-      res.send('Success', user);
+      res.status(200).send('Success', user);
     }).catch((err) => {
-      res.send(err);
+      res.status(500).send(err);
     });
   
 })
 
 
-app.post("/users", (req, res) => {
-  const { username } = req.body;
-  chatkit.createUser({
-    username
-  })
-    .then((user) => {
-      res.send('Success', user);
-    }).catch((err) => {
-      res.send(err);
-    });
-  
-})
 
 // app.post("/users", (req, res) => {
 //   const { username } = req.body;

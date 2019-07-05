@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@pusher/chatkit-server": "^0.12.1",
+    "@pusher/chatkit-server": "^2.0.1",
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "express": "^4.16.3"
