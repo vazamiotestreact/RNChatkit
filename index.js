@@ -17,21 +17,25 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
+  console.log("AAA: 1")
   res.send("all green!");
 });
 
 app.post("/users", (req, res) => {
   const { username } = req.body;
-
+ 
   chatkit
     .createUser({
       id: username,
       name: username
     })
     .then(() => {
+      console.log("AAA: 2 ok")
       res.sendStatus(201);
     })
     .catch(error => {
+      console.log("AAA: 2 error" )
+      console.log(error )
       if (error.error === "services/chatkit/user_already_exists") {
         res.sendStatus(200);
       } else {
