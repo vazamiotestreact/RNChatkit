@@ -4,8 +4,8 @@ const cors = require("cors");
 const Chatkit = require("@pusher/chatkit-server");
 
 const app = express();
-const instance_locator_id = "YOUR INSTANCE LOCATOR ID";
-const chatkit_secret = "YOUR CHATKIT SECRET";
+const instance_locator_id = "082d1264-5771-48aa-9828-a1f0e3231330";
+const chatkit_secret = "9f524a7a-d414-45f8-b2a9-498267df3cd6:Tywp2QvyqFS6tGkq67whRFkmiCZgCZdnnNp6SsGR1W8=";
 
 const chatkit = new Chatkit.default({
   instanceLocator: `v1:us1:${instance_locator_id}`,
